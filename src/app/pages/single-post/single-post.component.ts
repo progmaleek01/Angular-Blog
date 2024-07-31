@@ -17,7 +17,7 @@ export class SinglePostComponent {
   ) {
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
-      this.postService.countViews(id);
+      // this.postService.countViews(id);
       this.postService.loadSingleData(id).subscribe((val) => {
         this.postData = val;
         this.loadSimilarPosts(this.postData.category.categoryId);
